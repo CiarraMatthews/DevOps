@@ -1,0 +1,66 @@
+def isInt(input):
+  val = int(input)
+
+def getName():
+  #no numbers
+  try:
+    fName = input("First Name: ")
+    fName.isalpha()
+  except ValueError:
+    print("\nPlease input letters only")
+  try:
+    lName = input("Last Name: ")
+    lName.isalpha()
+  except ValueError:
+    print("\nPlease input letters only")
+
+def getDOB():
+  #don't accept too recent of dates
+  print("\nPlease input the following in numbers")
+  try:
+    month = input("Month: ")
+    isInt(month)
+  except ValueError:
+    print("Please enter an integer value")
+    getDOB()
+  try:
+    date = input("Date: ")
+    isInt(date)
+  except ValueError:
+    print("Please enter an integer value")
+  try:
+    year = input("Year: ")
+    isInt(year)
+  except ValueError:
+    print("Please enter an integer value")
+
+def getEmail():
+  #check for back containing . something
+  email = ("Please type in your email: ")
+
+def getAddress():
+  #import dictionary of possible options
+  zipcode = input("Zipcode: ")
+  city = input("City: ")
+  state = input("State: ")
+
+def getRace():
+  #make this one optional
+  race = input("Race: ")
+
+def getAge():
+  age = input("Age: ")
+
+def getSex():
+  sex = input("Sex: ")
+
+def main():
+  getName()
+  getDOB()
+  getEmail()
+  getAddress()
+  getRace()
+  getAge()
+  getSex()
+
+main()
