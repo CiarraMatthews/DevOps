@@ -1,3 +1,20 @@
+from enum import IntEnum
+from functools import total_ordering
+@total_ordering
+class Month(IntEnum):
+  JANUARY = 1
+  FEBRUARY = 2
+  MARCH = 3
+  APRIL = 4
+  MAY = 5
+  JUNE = 6
+  JULY = 7
+  AUGUST = 8
+  SEPTEMBER = 9
+  OCTOBER = 10
+  NOVEMBER = 11
+  DECEMBER = 12
+
 def isInt(input):
   val = int(input)
 
@@ -5,11 +22,18 @@ def getName():
   #no numbers
   try:
     fName = input("First Name: ")
+    if(len(fName) > 30):
+      print("Please type in a reasonable first name")
+      getName()
+    #does not work
     fName.isalpha()
   except ValueError:
     print("\nPlease input letters only")
   try:
     lName = input("Last Name: ")
+    if(len(lName) > 30):
+      print("Please type in a reasonable last name")
+      getName()
     lName.isalpha()
   except ValueError:
     print("\nPlease input letters only")
@@ -18,18 +42,32 @@ def getDOB():
   #don't accept too recent of dates
   print("\nPlease input the following in numbers")
   try:
-    month = input("Month: ")
+    month = int(input("Month: "))
     isInt(month)
+    if (month < Month.JANUARY or month > Month.DECEMBER):
+      print("Please enter a valid month")
+      getDOB()
   except ValueError:
     print("Please enter an integer value")
     getDOB()
   try:
-    date = input("Date: ")
+    date = int(input("Date: "))
+    if (date < 1 or date > 31):
+      print("Please enter a valid day")
+      getDOB()
+    if (month == Month.FEBRUARY):
+      if (date < 1 or date > 29):
+        print("Please enter a valid day for February")
+        getDOB()
+    if(month == Month.APRIL or month == Month.JUNE or month == Month.SEPTEMBER or month == Month.NOVEMBER):
+      if (date < 1 or date > 30):
+        print("This month only has 30 days. Please try again")
+        getDOB()
     isInt(date)
   except ValueError:
     print("Please enter an integer value")
   try:
-    year = input("Year: ")
+    year = int(input("Year: "))
     isInt(year)
   except ValueError:
     print("Please enter an integer value")
@@ -53,8 +91,11 @@ def getAge():
 
 def getSex():
   sex = input("Sex: ")
+  # if sex not in (Gender.MALE, Gender.FEMALE, Gender.N_A):
+  #   raise ValueError('gender not valid')
 
 def main():
+  #store and print this information next
   getName()
   getDOB()
   getEmail()
