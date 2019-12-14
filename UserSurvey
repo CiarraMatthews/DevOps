@@ -1,6 +1,4 @@
 from enum import IntEnum
-from functools import total_ordering
-@total_ordering
 class Month(IntEnum):
   JANUARY = 1
   FEBRUARY = 2
@@ -18,25 +16,36 @@ class Month(IntEnum):
 def isInt(input):
   val = int(input)
 
-def getName():
-  #no numbers
+def getFirstName():
   try:
     fName = input("First Name: ")
     if(len(fName) > 30):
       print("Please type in a reasonable first name")
       getName()
     #does not work
-    fName.isalpha()
+    if(fName.isalpha() == False):
+      print("Stop")
+      getFirstName()
   except ValueError:
     print("\nPlease input letters only")
+
+def getLastName():
   try:
     lName = input("Last Name: ")
     if(len(lName) > 30):
       print("Please type in a reasonable last name")
       getName()
-    lName.isalpha()
+    if(lName.isalpha() == False):
+      print("Stop")
+      getLastName()
   except ValueError:
     print("\nPlease input letters only")
+
+def getName():
+  #no numbers
+  getFirstName()
+  getLastName()
+  
 
 def getDOB():
   #don't accept too recent of dates
@@ -51,6 +60,7 @@ def getDOB():
     print("Please enter an integer value")
     getDOB()
   try:
+    #will clean this up
     date = int(input("Date: "))
     if (date < 1 or date > 31):
       print("Please enter a valid day")
@@ -68,7 +78,10 @@ def getDOB():
     print("Please enter an integer value")
   try:
     year = int(input("Year: "))
-    isInt(year)
+    if (year > 50 and year < 99):
+      print("Did you mean" + year + 1900)
+    if(year <2010):
+      isInt(year)
   except ValueError:
     print("Please enter an integer value")
 
