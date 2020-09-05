@@ -1,0 +1,3 @@
+[submodule "Containers/Containers/react/custom-app/react-temp"]
+	path = Containers/Containers/react/custom-app/react-temp
+	url = https://github.com/facebook/create-react-app
