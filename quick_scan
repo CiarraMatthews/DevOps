@@ -1,0 +1,1 @@
+nmap -sV -O 10.0.0.0/24 >> test.txt; nmap -F 10.0.0.0/24 >> test.txt
