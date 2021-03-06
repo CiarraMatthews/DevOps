@@ -1,8 +1,13 @@
-#!/bin/bash
-cp ~/secrets/terraform.tfvars.asc .
-gpg --decrypt --nosymkey-cache --output ./terraform.tfvars ./terraform.tfvars.asc
-terraform plan
-terraform apply
-sleep 60s
-#makes sure you don't store credentials
-rm ./terraform.tfvars*
+-----BEGIN PGP MESSAGE-----
+
+jA0ECQMCo/0VxRfafRHt0sC2Acz6bnYEgqe7r7TYnlNwrSDfSb8EkcH8NaGadcaM
+gOUeFRHU83fnsi/gNBhiuwNaNfKrXersOGIObVzn+WRmi8pTRakJna59QJYOJ3yO
+qOoH1hXO3CyzR6M3+tvmxM+GEK9OnxrmgUS+WNtAT6KUT034CDmrbcq2+MRsTv1y
+ssoNOosX71lqY4VA4Vbd2FSaZ71OJ4bxKKxsAnXRLZ3JLJdcnSd5orW6tG4pBOoH
+KWkh2vf2ySLXw+USso91TSFPB3H3sK8GpyKbeuTiqvkEkvXG82hq8fdLjTDWfThV
+tYcOp32yj/1pmKUObrYcRvFo/XtXZ2/quutcE4u/1HHWHdtZ5nGvkbyMhh6teuOU
+DO7xEowFru2rMqgTGHNEus5KS37B8ZKi+0KMZNZ/yPWwMxpIpDRgmtu53gMRJMlJ
+TV//HXf6QyeLsw+/8Ew092QhiQ4pyCiUkOeWXTpyZDKZVxRz0Locw32DmTqZqUhZ
+9R477ZffUUI=
+=jSqk
+-----END PGP MESSAGE-----
