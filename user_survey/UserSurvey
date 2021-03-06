@@ -1,0 +1,141 @@
+# class Person:
+#   def __init__(self, name, birthday, email, address, race, sex):
+#     self.name = name
+#     self.birthday = birthday;
+#     self.email = email;
+#     self.address = address;
+    #self.tricks = []    # creates a new empty list for each dog
+
+    #def add_trick(self, trick):
+       # self.tricks.append(trick)
+
+from enum import IntEnum
+class Month(IntEnum):
+  JANUARY = 1
+  FEBRUARY = 2
+  MARCH = 3
+  APRIL = 4
+  MAY = 5
+  JUNE = 6
+  JULY = 7
+  AUGUST = 8
+  SEPTEMBER = 9
+  OCTOBER = 10
+  NOVEMBER = 11
+  DECEMBER = 12
+
+def isInt(input):
+  val = int(input)
+
+def getFirstName():
+  try:
+    fName = input("First Name: ")
+    if(len(fName) > 30):
+      print("Please type in a reasonable first name")
+      getName()
+    if(fName.isalpha() == False):
+      print("Stop")
+      getFirstName()
+  except ValueError:
+    print("\nPlease input letters only")
+  return fName
+
+def getLastName():
+  try:
+    lName = input("Last Name: ")
+    if(len(lName) > 30):
+      print("Please type in a reasonable last name")
+      getName()
+    if(lName.isalpha() == False):
+      print("Stop")
+      getLastName()
+  except ValueError:
+    print("\nPlease input letters only")
+  return lName
+
+def getName():
+  fName = getFirstName()
+  lName = getLastName()
+  fullName = fName + " " + lName
+  return (fullName)
+  
+
+def getDOB():
+  #don't accept too recent of days
+  print("\nPlease input the following in numbers")
+  try:
+    month = int(input("Month: "))
+    isInt(month)
+    if (month < Month.JANUARY or month > Month.DECEMBER):
+      print("Please enter a valid month")
+      getDOB()
+  except ValueError:
+    print("Please enter an integer value")
+    getDOB()
+  try:
+    #will clean this up
+    day = int(input("day: "))
+    if (day < 1 or day > 31):
+      print("Please enter a valid day")
+      getDOB()
+    if (month == Month.FEBRUARY):
+      if (day < 1 or day > 29):
+        print("Please enter a valid day for February")
+        getDOB()
+    if(month == Month.APRIL or month == Month.JUNE or month == Month.SEPTEMBER or month == Month.NOVEMBER):
+      if (day < 1 or day > 30):
+        print("This month only has 30 days. Please try again")
+        getDOB()
+    isInt(day)
+  except ValueError:
+    print("Please enter an integer value")
+  try:
+    year = int(input("Year: "))
+    if (year > 50 and year < 99):
+      print("Did you mean" + (year + 1900))
+    if(year <2010):
+      isInt(year)
+  except ValueError:
+    print("Please enter an integer value")
+
+def getEmail():
+  #check for back containing . something
+  email = input("Please type in your email: ")
+  #if(email !contain(@) and email !contain (.)):
+  #print("That email wasn't even remotely valid. Try again")
+  #getEmail()
+  return email
+
+def getAddress():
+  #import dictionary of possible options
+  zipcode = input("Zipcode: ")
+  city = input("City: ")
+  state = input("State: ")
+  address = city + ", " + state + ", " + zipcode
+  return address
+
+def getRace():
+  #make this one optional
+  race = input("Race: ")
+  return race
+
+def getSex():
+  sex = input("Sex: ")
+  return sex
+  # if sex not in (Gender.MALE, Gender.FEMALE, Gender.N_A):
+  #   raise ValueError('gender not valid')
+
+def main():
+  
+  personInfo =	{
+    "name": getName(),
+    "dob": getDOB(),
+    "email": getEmail(),
+    "address":getAddress(),
+    "race" : getRace,
+    "sex": getSex(),
+  }
+  
+  print(personInfo)
+
+main()

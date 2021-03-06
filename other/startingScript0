@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Starting"
+sudo apt-get update
+sudo apt-get install python
+sudo-apt-get istall python-pip
+sudo curl -O https://releases.hashicorp.com/terraform/0.12.6/terraform_0.12.6_linux_amd64.zip
+sudo apt-get install unzip
+sudo mkdir /bin/terraform
+sudo unzip terraform_0.12.6_linux_amd64.zip -d /bin/terraform
+export PATH-$PATH:/bin/terraform
+terraform --version
+sudo pip install awscli --upgrade
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+ansible --version
+sudo su -
+ssh-keygen
+ssh-agent bash
+ssh-add/root/.ssh/ciarram
+ssh-add -l

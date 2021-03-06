@@ -21,4 +21,17 @@ def function():
 	else:
 		print("boo!")
 
+def function2():
+	num = input("Type a number between 10 and 20: ")
+	print(f'{num} is between 10 and 20')
+
+
+
 function()
+function2()
+
+#pop to remove from end or by index
+#remove to remove by value
+
+
+
