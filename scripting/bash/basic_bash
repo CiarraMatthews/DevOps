@@ -2,7 +2,7 @@
 #adduser qiqi
 dscl . -create /User/Julie
 #groupadd team1
-dscl . create /Groups/Not_Trustworthy
+dscl . -create /Groups/Not_Trustworthy
 #usermod -a -G team1 qiqi
 dscl . append /Groups/Not_Trustworthy GroupMembership $Julie
 cp /Users/ciarra/history.txt .

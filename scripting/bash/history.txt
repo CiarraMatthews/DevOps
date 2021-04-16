@@ -1,0 +1,16 @@
+ 1000  find / -name terminal
+ 1001  cd Cs
+ 1002  cd CSClub
+ 1003  ls
+ 1004  vi python_thing.py
+ 1005  ls
+ 1006  cd Practice
+ 1007  ls
+ 1008  vi card_sorting.py
+ 1009  ls
+ 1010  vi card_sorting.py
+ 1011  vi card_sorting.py
+ 1012  cd ..
+ 1013  cd ..
+ 1014  ls
+ 1015  history
