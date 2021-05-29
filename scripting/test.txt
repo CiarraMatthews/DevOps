@@ -1,0 +1,187 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-24 14:37 PDT
+Nmap scan report for 10.0.0.1
+Host is up (0.082s latency).
+Not shown: 94 closed ports
+PORT      STATE    SERVICE
+22/tcp    filtered ssh
+23/tcp    filtered telnet
+53/tcp    open     domain
+80/tcp    open     http
+443/tcp   open     https
+49152/tcp open     unknown
+
+Nmap scan report for 10.0.0.72
+Host is up (0.0015s latency).
+All 100 scanned ports on 10.0.0.72 are closed
+
+Nmap scan report for 10.0.0.254
+Host is up (0.0038s latency).
+All 100 scanned ports on 10.0.0.254 are closed
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 3.86 seconds
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-24 14:41 PDT
+Nmap scan report for 10.0.0.1
+Host is up (0.0054s latency).
+Not shown: 994 closed ports
+PORT      STATE    SERVICE   VERSION
+22/tcp    filtered ssh
+23/tcp    filtered telnet
+53/tcp    open     domain    dnsmasq 2.78
+80/tcp    open     http      Xfinity Broadband Router Server
+443/tcp   open     ssl/https Xfinity Broadband Router Server
+49152/tcp open     upnp      Portable SDK for UPnP devices 1.6.22 (Linux 3.12.14; UPnP 1.0)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.91%I=7%D=4/24%Time=608490AA%P=x86_64-apple-darwin17.7.0%
+SF:r(GetRequest,2AFE,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20text/html
+SF:\r\nX-robots-tag:\x20noindex,nofollow\r\nX-Frame-Options:\x20deny\r\nX-
+SF:XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosni
+SF:ff\r\nContent-Security-Policy:\x20default-src\x20'self'\x20'unsafe-inli
+SF:ne'\x20'unsafe-eval';\x20style-src\x20'self'\x20'unsafe-inline'\x20'uns
+SF:afe-eval';\x20frame-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\
+SF:x20font-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20form-acti
+SF:on\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20script-src\x20'sel
+SF:f'\x20'unsafe-inline'\x20'unsafe-eval';\x20img-src\x20'self';\x20connec
+SF:t-src\x20'self';\x20object-src\x20'none';\x20media-src\x20'none';\x20sc
+SF:ript-nonce\x20'none';\x20plugin-types\x20'none';\x20reflected-xss\x20'n
+SF:one';\x20report-uri\x20'none';\r\nContent-Length:\x2010247\r\nDate:\x20
+SF:Sat,\x2024\x20Apr\x202021\x2021:42:00\x20GMT\r\nServer:\x20Xfinity\x20B
+SF:roadband\x20Router\x20Server\r\nConnection:\x20close\r\n\r\n\r\n\n\n\n<
+SF:!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict/
+SF:/EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\n<ht
+SF:ml\x20xmlns=\"http://www\.w3")%r(HTTPOptions,2AFE,"HTTP/1\.0\x20200\x20
+SF:OK\r\nContent-type:\x20text/html\r\nX-robots-tag:\x20noindex,nofollow\r
+SF:\nX-Frame-Options:\x20deny\r\nX-XSS-Protection:\x201;\x20mode=block\r\n
+SF:X-Content-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x20defau
+SF:lt-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20style-src\x20'
+SF:self'\x20'unsafe-inline'\x20'unsafe-eval';\x20frame-src\x20'self'\x20'u
+SF:nsafe-inline'\x20'unsafe-eval';\x20font-src\x20'self'\x20'unsafe-inline
+SF:'\x20'unsafe-eval';\x20form-action\x20'self'\x20'unsafe-inline'\x20'uns
+SF:afe-eval';\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';
+SF:\x20img-src\x20'self';\x20connect-src\x20'self';\x20object-src\x20'none
+SF:';\x20media-src\x20'none';\x20script-nonce\x20'none';\x20plugin-types\x
+SF:20'none';\x20reflected-xss\x20'none';\x20report-uri\x20'none';\r\nConte
+SF:nt-Length:\x2010247\r\nDate:\x20Sat,\x2024\x20Apr\x202021\x2021:42:03\x
+SF:20GMT\r\nServer:\x20Xfinity\x20Broadband\x20Router\x20Server\r\nConnect
+SF:ion:\x20close\r\n\r\n\r\n\n\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C/
+SF:/DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml
+SF:1/DTD/xhtml1-strict\.dtd\">\n<html\x20xmlns=\"http://www\.w3");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.91%T=SSL%I=7%D=4/24%Time=608490B0%P=x86_64-apple-darwin
+SF:17.7.0%r(GetRequest,2AFE,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20te
+SF:xt/html\r\nX-robots-tag:\x20noindex,nofollow\r\nX-Frame-Options:\x20den
+SF:y\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x
+SF:20nosniff\r\nContent-Security-Policy:\x20default-src\x20'self'\x20'unsa
+SF:fe-inline'\x20'unsafe-eval';\x20style-src\x20'self'\x20'unsafe-inline'\
+SF:x20'unsafe-eval';\x20frame-src\x20'self'\x20'unsafe-inline'\x20'unsafe-
+SF:eval';\x20font-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20fo
+SF:rm-action\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20script-src\
+SF:x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20img-src\x20'self';\x2
+SF:0connect-src\x20'self';\x20object-src\x20'none';\x20media-src\x20'none'
+SF:;\x20script-nonce\x20'none';\x20plugin-types\x20'none';\x20reflected-xs
+SF:s\x20'none';\x20report-uri\x20'none';\r\nContent-Length:\x2010247\r\nDa
+SF:te:\x20Sat,\x2024\x20Apr\x202021\x2021:42:07\x20GMT\r\nServer:\x20Xfini
+SF:ty\x20Broadband\x20Router\x20Server\r\nConnection:\x20close\r\n\r\n\r\n
+SF:\n\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20
+SF:Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\
+SF:">\n<html\x20xmlns=\"http://www\.w3")%r(HTTPOptions,2AFE,"HTTP/1\.0\x20
+SF:200\x20OK\r\nContent-type:\x20text/html\r\nX-robots-tag:\x20noindex,nof
+SF:ollow\r\nX-Frame-Options:\x20deny\r\nX-XSS-Protection:\x201;\x20mode=bl
+SF:ock\r\nX-Content-Type-Options:\x20nosniff\r\nContent-Security-Policy:\x
+SF:20default-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20style-s
+SF:rc\x20'self'\x20'unsafe-inline'\x20'unsafe-eval';\x20frame-src\x20'self
+SF:'\x20'unsafe-inline'\x20'unsafe-eval';\x20font-src\x20'self'\x20'unsafe
+SF:-inline'\x20'unsafe-eval';\x20form-action\x20'self'\x20'unsafe-inline'\
+SF:x20'unsafe-eval';\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe
+SF:-eval';\x20img-src\x20'self';\x20connect-src\x20'self';\x20object-src\x
+SF:20'none';\x20media-src\x20'none';\x20script-nonce\x20'none';\x20plugin-
+SF:types\x20'none';\x20reflected-xss\x20'none';\x20report-uri\x20'none';\r
+SF:\nContent-Length:\x2010247\r\nDate:\x20Sat,\x2024\x20Apr\x202021\x2021:
+SF:42:10\x20GMT\r\nServer:\x20Xfinity\x20Broadband\x20Router\x20Server\r\n
+SF:Connection:\x20close\r\n\r\n\r\n\n\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"
+SF:-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/T
+SF:R/xhtml1/DTD/xhtml1-strict\.dtd\">\n<html\x20xmlns=\"http://www\.w3");
+MAC Address: 18:B8:1F:A5:D8:1F (Arris Group)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel:3.12.14
+
+Nmap scan report for 10.0.0.8
+Host is up (0.011s latency).
+Not shown: 999 filtered ports
+PORT     STATE SERVICE VERSION
+9081/tcp open  http    Mongoose httpd
+MAC Address: 64:12:36:E4:40:89 (Technicolor CH USA)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.10 - 4.11, Linux 3.2 - 4.9
+Network Distance: 1 hop
+
+Nmap scan report for 10.0.0.254
+Host is up (0.0054s latency).
+All 1000 scanned ports on 10.0.0.254 are closed
+MAC Address: 18:B8:1F:A5:D8:20 (Arris Group)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+Nmap scan report for 10.0.0.72
+Host is up (0.000051s latency).
+All 1000 scanned ports on 10.0.0.72 are closed (500) or filtered (500)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (4 hosts up) scanned in 189.66 seconds
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-04-24 14:44 PDT
+Nmap scan report for 10.0.0.1
+Host is up (0.025s latency).
+Not shown: 94 closed ports
+PORT      STATE    SERVICE
+22/tcp    filtered ssh
+23/tcp    filtered telnet
+53/tcp    open     domain
+80/tcp    open     http
+443/tcp   open     https
+49152/tcp open     unknown
+MAC Address: 18:B8:1F:A5:D8:1F (Arris Group)
+
+Nmap scan report for 10.0.0.8
+Host is up (0.095s latency).
+All 100 scanned ports on 10.0.0.8 are filtered
+MAC Address: 64:12:36:E4:40:89 (Technicolor CH USA)
+
+Nmap scan report for 10.0.0.66
+Host is up (0.0032s latency).
+Not shown: 86 closed ports
+PORT     STATE    SERVICE
+26/tcp   filtered rsftp
+110/tcp  filtered pop3
+179/tcp  filtered bgp
+548/tcp  filtered afp
+990/tcp  filtered ftps
+3306/tcp filtered mysql
+3986/tcp filtered mapper-ws_ethd
+4899/tcp filtered radmin
+5051/tcp filtered ida-agent
+5631/tcp filtered pcanywheredata
+5666/tcp filtered nrpe
+5900/tcp filtered vnc
+6000/tcp filtered X11
+9999/tcp filtered abyss
+MAC Address: AA:97:50:C6:82:C6 (Unknown)
+
+Nmap scan report for 10.0.0.254
+Host is up (0.0045s latency).
+All 100 scanned ports on 10.0.0.254 are closed
+MAC Address: 18:B8:1F:A5:D8:20 (Arris Group)
+
+Nmap scan report for 10.0.0.72
+Host is up (0.0000090s latency).
+All 100 scanned ports on 10.0.0.72 are closed
+
+Nmap done: 256 IP addresses (5 hosts up) scanned in 24.10 seconds
