@@ -1,0 +1,1 @@
+awk '/OS/, '/Owner/' devops.spx >> test.txt
