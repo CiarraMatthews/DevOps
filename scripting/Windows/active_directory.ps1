@@ -13,6 +13,7 @@ New-LocalUser -Name "Ningguang" -Password $Password
 New-LocalUser -Name "Chonyun" -Password $Password
 New-LocalUser -Name "Kaeya" -Password $Password
 New-LocalUser -Name "Diona" -Password $Password
+New-LocalUser -Name "Kazuha Kaedehara" -Password $Password
 
 #Adding New Groups
 NEW-ADGroup -name "HR" -groupscope Global
@@ -27,3 +28,6 @@ New-ADOrganizationalUnit -Name "Finances"
 New-ADOrganizationalUnit -Name "IT"
 New-ADOrganizationalUnit -Name "Sales"
 New-ADOrganizationalUnit -Name "DevOps"
+
+#Lists users on system
+net user
