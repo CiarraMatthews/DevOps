@@ -8,12 +8,12 @@ Install-ADDSForest -DomainName tekperfect.corp -InstallDNS
 $Password = Read-Host -AsSecureString
 
 #Adding New Users
-New-LocalUser -Name "Qiqi" -Password $Password
-New-LocalUser -Name "Ningguang" -Password $Password
-New-LocalUser -Name "Chonyun" -Password $Password
-New-LocalUser -Name "Kaeya" -Password $Password
-New-LocalUser -Name "Diona" -Password $Password
-New-LocalUser -Name "Kazuha Kaedehara" -Password $Password
+New-ADUser -Name "Qiqi" -Password $Password
+New-ADUser -Name "Ningguang" -Password $Password
+New-ADUser -Name "Chonyun" -Password $Password
+New-ADUser -Name "Kaeya" -Password $Password
+New-ADUser -Name "Diona" -Password $Password
+New-ADUser -Name "Kazuha Kaedehara" -Password $Password
 
 #Adding New Groups
 NEW-ADGroup -name "HR" -groupscope Global
