@@ -1,5 +1,5 @@
 .terraform
-terraform.tfvars
+terraform.tfvars*
 mykey*
 terraform.tfstate*
 tf*
